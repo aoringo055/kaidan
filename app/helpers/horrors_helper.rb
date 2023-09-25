@@ -1,0 +1,2 @@
+module HorrorsHelper
+end

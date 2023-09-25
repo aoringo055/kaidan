@@ -1,0 +1,31 @@
+<h1>怪談投稿ページ</h1>
+<%= form_for @horror do |f| %>
+
+    <div class='form-group'>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+        <div class='form-check'>
+            <%= tag.label class: 'form-check-label' do %>
+                <%= tag.check_box class: 'form-check-input' %>
+                <%= tag.text %>
+            <% end %>
+        </div>
+    <% end %>
+</div>
+
+  <div class="field">
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+
+  
+
+
+  <div class="field">
+    <%= f.label :本文  %>
+    <%= f.text_area :sentence, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "怪談を投稿する" %>
+<% end %>
+
+<%= link_to "怪談一覧に戻る", horrors_path %>

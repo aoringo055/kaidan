@@ -1,0 +1,142 @@
+
+
+body {
+    background-color:#8b898d;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+  background-image: url("../images/kowaiyo.jpg");
+  background-size: cover;
+width: 100%;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+#meikan{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 1%;
+}
+
+#meikan a{
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+.title-container{
+    font-size: xx-large;
+    font-family: serif, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.title-container p{
+    font-size: 20px;
+}
+
+.kaidanshi{
+    font-family: serif, sans-serif;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    flex-flow: wrap row ;
+}
+
+
+
+.namae{
+    width: 14em;
+    height: 6em;
+    padding: 0.5em 1em;
+    margin: 1em 2em;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background-color: #740d04;
+    border: solid 3px #740d04;/*線*/
+    border-radius: 30px;/*角の丸み*/
+    text-align: center;
+    display: flex;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -webkit-tap-highlight-color: transparent;
+    transition: .2s ease-out;
+}
+
+.namae:hover {
+
+	transform: translateY(-4px);
+
+	/*--影の複数指定--*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+
+}
+
+.honbun{
+    font-family: serif, sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+#shindan{
+    text-align: center;
+    margin: 5% 0%;
+}
+
+#shindan a{
+    text-decoration: none;
+    border: solid 3px #740d04;/*線*/
+    background-color: #740d04;
+    padding: 0.5em 1em;
+    border-radius: 20px;/*角の丸み*/
+    font-weight: bold;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+   
+    -webkit-tap-highlight-color: transparent;
+    transition: .2s ease-out;
+}
+
+#shindan a:hover {
+
+	transform: translateY(-4px);
+
+	/*--影の複数指定--*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+
+}
+
+#toko{
+    text-align: center;
+    margin: 5% 0%;
+}
+
+#toko a{
+    text-decoration: none;
+    border: solid 3px #740d04;/*線*/
+    background-color: #740d04;
+    padding: 0.5em 1em;
+    border-radius: 20px;/*角の丸み*/
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+   
+    -webkit-tap-highlight-color: transparent;
+    transition: .2s ease-out;
+}
+
+#toko a:hover {
+
+	transform: translateY(-4px);
+
+	/*--影の複数指定--*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+
+}

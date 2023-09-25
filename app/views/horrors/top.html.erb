@@ -1,0 +1,83 @@
+<html lang="ja">
+<meta charset="utf-8">
+    <title>top</title>
+<head>
+ <link rel="stylesheet" href="top.css">
+ </head>
+
+
+<body>
+
+<br><br><br>
+ <section id="meikan">
+ <div class="title-container">
+  <h1>怪談師名鑑&nbsp;&nbsp;</h1>
+  <p>個性豊かな怪談師たちのプロフィールをご紹介いたします。クリックして詳細情報をご覧ください。</p>
+ </div>
+ <br>
+<div class=kaidanshi>
+
+ <div class="namae">
+ <%= link_to '稲川淳二', horrors_junji_path, :style=>"color: black;"%>
+ <iframe width="250" height="150" src="https://www.youtube.com/embed/nj49_qMaYh8?si=By4nLHdcMAKAMJIr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p>
+ </div> 
+ <br>
+ <div class="namae">
+  <%= link_to '村上ロック', horrors_rock_path, :style=>"color: black;" %>
+  <iframe width="250" height="150" src="https://www.youtube.com/embed/8LW6MJnrvnU?si=hNIuDtCeN95tMjTV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div> 
+  <br> 
+ <div class="namae"> 
+  <%= link_to '夜馬裕', horrors_yamayu_path, :style=>"color: black;" %>
+  <iframe width="250" height="150" src="https://www.youtube.com/embed/Zcq9NeAt6Bc?si=qZEaKZubKK9wCnUF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div> 
+  <br> 
+ <div class="namae">
+  <%= link_to '牛抱せん夏', horrors_senka_path, :style=>"color: black;" %>
+  <iframe width="250" height="150" src="https://www.youtube.com/embed/Zcq9NeAt6Bc?si=qZEaKZubKK9wCnUF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div> 
+  <br> 
+ <div class="namae">
+ <%= link_to '吉田悠軌', horrors_yuki_path, :style=>"color: black;" %>
+  <iframe width="250" height="150" src="https://www.youtube.com/embed/L0KaHmdzN4g?si=CMjFC7z05tkRzSRi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div>
+
+</div>
+</section>
+  <br>
+  <br>
+
+ <section id="shindan">
+ <div class="title-container">
+  <h1>怪談師診断</h1>
+ </div>
+ <div class="honbun">
+   <p>あなたにぴったりな怪談師を診断いたします。</p>
+   <p>怪談初心者さまにもおすすめです。</p>
+  <br>
+  <%= link_to "診断を始める", new_perfume_path, :style=>"color: black;"%>
+  <%= link_to "診断を始める2", sindans_path, :style=>"color: black;"%>
+ </div>
+ <br>
+ <br>
+ </section>
+ 
+ <section id="toko">
+ <div class="title-container">
+  <h1>みんなの恐怖体験</h1> 
+ </div>
+ <div class="honbun">
+ <p>怪談の投稿と閲覧ができます。</p>
+ <br>
+ <%= link_to "みんなの恐怖体験のページへ", horrors_path %>
+
+ </div>
+ </section>
+ <br>
+ <br>
+ <br>
+
+ 
+
+
+</body>

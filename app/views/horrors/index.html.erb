@@ -1,0 +1,85 @@
+<html lang="ja">
+<meta charset="utf-8">
+    <title>top</title>
+<head>
+ <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+<div class="kaidantoko">
+
+<section class="title">
+<div class="tokotitle">
+<h1>みんなの恐怖体験</h1>
+</div>
+</section>
+
+<section class="kensaku">
+<div class="eturan">
+  <h3>怪談を探す</h3>
+    <%= form_tag({controller:"horrors",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag '検索する'  %>
+    <% end %>
+
+    <%= form_tag({controller:"horrors",action:"index"}, method: :get) do %>
+    <% Tag.all.each do |t| %>
+      <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+    <% end %>
+    <%= submit_tag '検索' %>
+    <% end %>
+
+</div>
+</section>
+
+
+<section class="tokoeturan">
+<div class="horrors-container">
+
+  <% if user_signed_in? %>
+    <%= link_to "マイページへ", user_path(current_user.id) %>
+  <% end %>
+
+  <% @horrors.each do |t| %>
+    <%= link_to t.user.name, user_path(t.user.id) %>
+    <div class="horror">
+      <%= t.title %>
+      <%= t.sentence %>
+
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+            <%= link_to horror_like_path(id: t.id, horror_id: t.id), method: :delete do %>
+                <p>いいねを取り消す</p><%= t.likes.count %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+                <% end %>
+        <% else %>
+            <%= link_to horror_likes_path(id: t.id, horror_id: t.id), method: :post do %>
+                <p>いいね</p><%= t.likes.count %>
+                <i class="far fa-heart"></i><%= t.likes.count %>
+                <% end %>
+        <% end %>
+      <% else %>
+        <p>いいねの数 = </p><%= t.likes.count %>
+      <% end %>
+
+      <%= link_to "詳細へ", horror_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集する", edit_horror_path(t.id) %>
+        <%= link_to "削除する", horror_path(t.id), method: :delete %>
+      <% end %> 
+      </div>
+    
+  <% end %>
+</div>
+</section>
+
+<section id="shinki">
+<div class="kaidantoko">
+  <%= link_to "新規投稿へ", new_horror_path %>
+</div>
+</section>
+
+</div>
+
+</body>

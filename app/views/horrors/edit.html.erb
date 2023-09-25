@@ -1,0 +1,9 @@
+<%= form_for @horror do |f| %>
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, :size => 30 %>
+
+    <%= f.label :本文  %>
+    <%= f.text_area :sentence, :size => "30x2" %>
+    
+    <%= f.submit "編集する" %>
+  <% end %>

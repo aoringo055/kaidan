@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaidan</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://kit.fontawesome.com/7fadd5377e.js" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+  </head>
+
+  <body>
+  
+<header>
+    <div class="blank">
+
+     <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <div class="menu-content">
+                <ul>
+                    <li>
+                        <%= link_to "怪談師診断", new_perfume_path %>
+                    </li>
+                    <li>
+                        <%= link_to "みんなの恐怖体験", horrors_path %>
+                    </li>
+                </ul>
+          </div>
+      </div>
+    </div>
+  
+
+  <div class="header-title">
+    <div class="r">  
+    <%= link_to "怪談情報サイト　おばけなんてないさ", horrors_top_path %></h1>
+    </div>
+    <div class="g">  
+    <%= link_to "怪談情報サイト　おばけなんてないさ", horrors_top_path %></h1>
+    </div>
+    <div class="b">  
+    <%= link_to "怪談情報サイト　おばけなんてないさ", horrors_top_path %></h1>
+    </div>
+  </div>
+
+    <div class="header-list">
+     <ul>
+     <% if user_signed_in? %>
+      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+     <% else %>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+     <% end %>
+     </ul>
+    </div>
+  
+  </header>
+
+
+  <main>
+   <%= yield %>
+  </main>
+
+  <footer>
+      <p>Copyright © AoiIshizuna All Rights Reserved.</p>
+  </footer>
+ </body>
+
+  
+</html>

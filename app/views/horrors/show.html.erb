@@ -1,0 +1,37 @@
+<h1>怪談</h1>
+<h3>怪談詳細</h3>
+<div class="horror">
+  <p><%= @horror.title %></p>
+  <p><%= @horror.sentence %></p>
+  <p><%= @horror.created_at %></p>
+  <% if user_signed_in? %>
+  <% if current_user.already_liked?(@horror) %>
+    <%= link_to horror_like_path(@horror), method: :delete do %>
+        <i class="fas fa-heart"></i><%= @horror.likes.count %>
+   
+        <p>いいねを取り消す</p><%= @horror.likes.count %>
+    <% end %>
+  <% else %>
+    <%= link_to horror_likes_path(@horror), method: :post do %>
+      <p>いいね</p><%= @horror.likes.count %>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>いいねの数 = </p><%= @horror.likes.count %>
+  <i class="far fa-heart"></i><%= @horror.likes.count %>
+
+  <% end %>
+
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @horror.liked_users.each do |user| %>
+<li><%= user.email %></li>
+<% end %>
+
+<% @horror.tags.each do |tag| %>
+    <span><%= tag.name %></span>
+<% end %>
+
+<%= link_to "編集する", edit_horror_path(@horror.id) %>
+<%= link_to "怪談一覧に戻る", horrors_path %>

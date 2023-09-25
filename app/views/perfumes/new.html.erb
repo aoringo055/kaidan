@@ -1,0 +1,56 @@
+<div>
+<h1>怪談師診断</h1>
+</div>
+
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="container-sindan">
+        <div class="row">
+            <div class="col-12">
+                <p>Question1. どちらかというと……</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>王道を行くものが好き</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>少しマイナーなくらいがいい</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question2. 歴史が好きだ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>はい</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>いいえ</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question3. 怖い話の好みは……</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>現実味のある話がいい</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>筋のある物語風がいい</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question5. 和の雰囲気が好きだ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>はい</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>いいえ</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit "結果を見る" %>
+    </div>
+<br>
+<br>
+<br>
+<% end %>
