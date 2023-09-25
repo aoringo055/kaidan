@@ -10,12 +10,12 @@ Tag.create([
   { name: '病院' },
   { name: '家' },
   { name: '車' },
-  { name: '人形' }
-  { name: '神社・寺' }
-  { name: 'ヒトコワ' }
-  { name: '呪い' }
-  { name: '海' }
-  { name: '山' }
-  { name: '宿' }
+  { name: '人形' },
+  { name: '神社・寺' },
+  { name: 'ヒトコワ' },
+  { name: '呪い' },
+  { name: '海' },
+  { name: '山' },
+  { name: '宿' },
   { name: 'その他' }
 ])
