@@ -45,6 +45,7 @@
     <%= link_to t.user.name, user_path(t.user.id) %>
     <div class="horror">
       <%= t.title %>
+      <br>
       <%= t.sentence %>
 
       <% if user_signed_in? %>

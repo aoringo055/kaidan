@@ -1,108 +1,122 @@
+<html lang="ja">
+<meta charset="utf-8">
+    <title>top</title>
+<head>
+ <link rel="stylesheet" href="kekka.css">
+</head>
+
+
+
+<section class="kekka">
+
 <div class="intoro">
-<h5>診断結果</h5>
+<h1>診断結果</h1>
 <p>あなたにおすすめの怪談師は…</p>
 </div>
+
+<br>
 
 <div class="horror-container">
 <div class="horror">
     <% if @perfume.question == "1111" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1112" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1121" %>
-    <h6>川奈まり子</h6>
-    <h6>三木大雲</h6>
-    <h6>城谷歩</h6>
+    <h3>川奈まり子</h3>
+    <h3>三木大雲</h3>
+    <h3>城谷歩</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1122" %>
-    <h6>中山市朗</h6>
+    <h3>中山市朗</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1211" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1212" %>
-    <h6>ぁみ</h6>
+    <h3>ぁみ</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1221" %>
-    <h6>稲川淳二</h6>
-    <h6>牛抱せん夏</h6>
+    <h3>稲川淳二</h3>
+    <h3>牛抱せん夏</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "1222" %>
-    <h6>下駄華緒</h6>
-    <h6>夜馬裕</h6>
+    <h3>下駄華緒</h3>
+    <h3>夜馬裕</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
     
     <% elsif @perfume.question == "2111" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "2112" %>
-    <h6>吉田悠軌</h6>
+    <h3>吉田悠軌</h3>
+    <iframe width="250" height="150" src="https://www.youtube.com/embed/L0KaHmdzN4g?si=CMjFC7z05tkRzSRi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
     
     <% elsif @perfume.question == "2121" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
     
     <% elsif @perfume.question == "2122" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "2211" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "2212" %>
-    <h6>DJ響</h6>
-    <h6>村上ロック</h6>
-    <h6>ファンキー中村</h6>
+    <h3>DJ響</h3>
+    <h3>村上ロック</h3>
+    <h3>ファンキー中村</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "2221" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
 
     <% elsif @perfume.question == "2222" %>
-    <h6>エラー</h6>
+    <h3>エラー</h3>
     <p></p>
     <p></p>
     <%= link_to 'もう一度診断する', new_perfume_path, class: "link" %>
@@ -114,3 +128,5 @@
 
 </div>
 </div>
+
+</section>

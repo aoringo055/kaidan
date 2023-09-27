@@ -1,6 +1,8 @@
-<div>
+<div class="shindan1">
 <h1>怪談師診断</h1>
-</div>
+<p>質問ごとに答えを一つ選んでください。最後まで答えたら、「結果を見る」をクリック。</p>
+
+<br>
 
 <%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
     <div class="container-sindan">
@@ -36,7 +38,7 @@
             </div>
 
             <div class="col-12">
-                <p>Question5. 和の雰囲気が好きだ</p>
+                <p>Question4. 和の雰囲気が好きだ</p>
             </div>
             <div class="col-6">
                 <p><%= f.check_box :question, {multiple: true}, "1", nil %>はい</p>
@@ -54,3 +56,5 @@
 <br>
 <br>
 <% end %>
+
+</div>
